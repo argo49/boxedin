@@ -1,0 +1,248 @@
+@import url(http://fonts.googleapis.com/css?family=Source+Sans+Pro:200);
+
+/* Typography Variables */
+$sans: 'Source Sans Pro', sans-serif;
+$titleFontSize: 85px !default;
+$paneFontSize: 40px !default;
+$paragraphSize: 24px !default;
+
+$light1: hsla(0, 0%, 100%, 0.15);	// Most transparent
+$light2: hsla(0, 0%, 100%, 0.30);	// Medium transparent
+$light3: hsla(0, 0%, 100%, 0.60);	// Most opaque
+
+$dark1: hsla(0, 0%, 0%, 0.15);	// Most transparent
+$dark2: hsla(0, 0%, 0%, 0.30);	// Medium transparent
+$dark3: hsla(0, 0%, 0%, 0.60);	// Most opaque
+
+$navy: #001F3F;
+$black: #111111;
+$blue: #0074D9;
+$aqua: #7FDBFF;
+$teal: #39CCCC;
+$olive: #3D9970;
+$green: #2ECC40;
+$lime: #01FF70;
+$yellow: #FFDC00;
+$orange: #FF851B;
+$red: #FF4136;
+$maroon: #85144B;
+$fuchsia: #F012BE;
+$purple: #B10DC9;
+$white: #FFFFFF;
+$silver: #DDDDDD;
+$grey: #AAAAAA;
+
+* {
+	padding: 0;
+	margin: 0;
+	font-family: $sans;
+}
+
+body, html {
+	height: 100%;
+	width: 100%;
+}
+
+h1, h2, h3, h4 {
+	font-weight: normal;
+}
+
+.boxedIn {
+	height: 90%;
+	overflow: hidden;
+	background: no-repeat center center; 
+    background-attachment: fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+
+	> h1 {
+		position:relative;
+		height: 15%;
+		margin: 0 15%;
+		font-size: $titleFontSize;
+
+		span {
+			position: absolute;
+			bottom: 0;
+			margin-bottom: 5px;
+		}
+	}
+
+	p {
+		font-size: $paragraphSize;
+		margin-top: 10px;
+	}
+
+	a {
+		color: inherit;
+		opacity: 0.7;
+	}
+
+	a:hover {
+		opacity: 1.0;
+	}
+}
+
+.boxedIn-slide {
+	height: 100%;
+	position: relative;
+}
+
+.boxedIn-paneContainer {
+	position: relative;
+	height: 100%;
+	float: left;
+}
+
+.boxedIn-pane {
+	position: relative;
+	max-height: 100%;
+	margin: 0 15%;
+
+	h2 {
+		font-size: $paneFontSize;
+	}
+
+	overflow-x: hidden;
+	overflow-y: auto;
+}
+
+.boxedIn-contentContainer {
+	height: 75%;
+}
+
+.boxedIn-dotContainer {
+	height: 10%;
+	text-align:center;
+}
+
+.boxedIn-dotBar {
+	position: relative;
+	height: 10px;
+	top: 33%;
+	display:inline-block;
+}
+
+.boxedIn-dot {
+	height: 10px;
+	width: 10px;
+	float: left;
+	margin: 0 10px;
+	background-color: $light2;
+}
+
+.boxedIn-dotActive, .boxedIn-dot:hover {
+	background-color: $light3;
+}
+
+
+.arrowPosition {
+	position: relative;
+	top: 33%;
+}
+
+.boxedIn-rightArrow:before {
+	@extend .arrowPosition;
+	content: "\203A";
+}
+
+.boxedIn-leftArrow:before {
+	@extend .arrowPosition;
+	content: "\2039";
+}
+
+.boxedIn-navArrow {
+	position: absolute;
+	height: 70%;
+	width: 15%;
+	font-size: 100px;
+	text-align: center;
+	z-index: 1;
+}
+
+.boxedIn-rightArrow {
+	right: 0px;
+}
+
+.boxedIn-scrollbar {
+	width: 8px;
+	margin: 3px;
+}
+
+.boxedIn-navArrow {
+	opacity: 0.3;
+}
+
+.boxedIn-navArrow:hover {
+	opacity: 0.6;
+}
+
+.boxedIn-shadowTop {
+    box-shadow: inset 0px 13px 20px -14px #222;
+}
+
+.boxedIn-shadowBottom {
+	box-shadow: inset 0px -13px 20px -14px #222;
+}
+
+// Light theme assumes a bright (non-white) background color
+.boxedIn-light {
+	color: $white;
+
+	.boxedIn-scrollbar::-webkit-scrollbar {
+		background-color: $light1;
+	}
+	.boxedIn-scrollbar::-webkit-scrollbar-thumb {
+		background-color: $light2;
+	}
+	.boxedIn-scrollbar::-webkit-scrollbar-thumb:hover{
+		background-color: $light3;
+	}
+	.boxedIn-dot {
+		background-color: $dark2;
+	}
+	.boxedIn-dotActive, .boxedIn-dot:hover {
+		background-color: $dark3;
+	}
+	.boxedIn-navArrow {
+		color: $light2;
+	}
+	.boxedIn-navArrow:hover {
+		color: $light3;
+	}
+	.boxedIn-slide {
+		background-color: $dark3;
+	}
+}
+
+// Dark theme assumes a dark (non-black) colored background
+.boxedIn-dark {
+	color: $black;
+
+	.boxedIn-scrollbar::-webkit-scrollbar {
+		background-color: $dark1;
+	}
+	.boxedIn-scrollbar::-webkit-scrollbar-thumb {
+		background-color: $dark2;
+	}
+	.boxedIn-scrollbar::-webkit-scrollbar-thumb:hover{
+		background-color: $dark3;
+	}
+	.boxedIn-dot {
+		background-color: $light2;
+	}
+	.boxedIn-dotActive, .boxedIn-dot:hover {
+		background-color: $light3;
+	}
+	.boxedIn-navArrow {
+		color: $dark2;
+	}
+	.boxedIn-navArrow:hover {
+		color: $dark3;
+	}
+	.boxedIn-slide {
+		background-color: $light3;
+	}
+}
