@@ -1,0 +1,156 @@
+@import url(http://fonts.googleapis.com/css?family=Source+Sans+Pro:200);
+/* Typography Variables */
+* {
+  padding: 0;
+  margin: 0;
+  font-family: "Source Sans Pro", sans-serif; }
+
+body, html {
+  height: 100%;
+  width: 100%; }
+
+h1, h2, h3, h4 {
+  font-weight: normal; }
+
+.boxedIn {
+  height: 90%;
+  overflow: hidden;
+  background: no-repeat center center;
+  background-attachment: fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover; }
+  .boxedIn > h1 {
+    position: relative;
+    height: 15%;
+    margin: 0 15%;
+    font-size: 85px; }
+    .boxedIn > h1 span {
+      position: absolute;
+      bottom: 0;
+      margin-bottom: 5px; }
+  .boxedIn p {
+    font-size: 24px;
+    margin-top: 10px; }
+  .boxedIn a {
+    color: inherit;
+    opacity: 0.7; }
+  .boxedIn a:hover {
+    opacity: 1.0; }
+
+.boxedIn-slide {
+  height: 100%;
+  position: relative; }
+
+.boxedIn-paneContainer {
+  position: relative;
+  height: 100%;
+  float: left; }
+
+.boxedIn-pane {
+  position: relative;
+  max-height: 100%;
+  margin: 0 15%;
+  overflow-x: hidden;
+  overflow-y: auto; }
+  .boxedIn-pane h2 {
+    font-size: 40px; }
+
+.boxedIn-contentContainer {
+  height: 75%; }
+
+.boxedIn-dotContainer {
+  height: 10%;
+  text-align: center; }
+
+.boxedIn-dotBar {
+  position: relative;
+  height: 10px;
+  top: 33%;
+  display: inline-block; }
+
+.boxedIn-dot {
+  height: 10px;
+  width: 10px;
+  float: left;
+  margin: 0 10px;
+  background-color: rgba(255, 255, 255, 0.3); }
+
+.boxedIn-dotActive, .boxedIn-dot:hover {
+  background-color: rgba(255, 255, 255, 0.6); }
+
+.arrowPosition, .boxedIn-rightArrow:before, .boxedIn-leftArrow:before {
+  position: relative;
+  top: 33%; }
+
+.boxedIn-rightArrow:before {
+  content: "\203A"; }
+
+.boxedIn-leftArrow:before {
+  content: "\2039"; }
+
+.boxedIn-navArrow {
+  position: absolute;
+  height: 70%;
+  width: 15%;
+  font-size: 100px;
+  text-align: center;
+  z-index: 1; }
+
+.boxedIn-rightArrow {
+  right: 0px; }
+
+.boxedIn-scrollbar {
+  width: 8px;
+  margin: 3px; }
+
+.boxedIn-navArrow {
+  opacity: 0.3; }
+
+.boxedIn-navArrow:hover {
+  opacity: 0.6; }
+
+.boxedIn-shadowTop {
+  box-shadow: inset 0px 13px 20px -14px #222; }
+
+.boxedIn-shadowBottom {
+  box-shadow: inset 0px -13px 20px -14px #222; }
+
+.boxedIn-light {
+  color: white; }
+  .boxedIn-light .boxedIn-scrollbar::-webkit-scrollbar {
+    background-color: rgba(255, 255, 255, 0.15); }
+  .boxedIn-light .boxedIn-scrollbar::-webkit-scrollbar-thumb {
+    background-color: rgba(255, 255, 255, 0.3); }
+  .boxedIn-light .boxedIn-scrollbar::-webkit-scrollbar-thumb:hover {
+    background-color: rgba(255, 255, 255, 0.6); }
+  .boxedIn-light .boxedIn-dot {
+    background-color: rgba(0, 0, 0, 0.3); }
+  .boxedIn-light .boxedIn-dotActive, .boxedIn-light .boxedIn-dot:hover {
+    background-color: rgba(0, 0, 0, 0.6); }
+  .boxedIn-light .boxedIn-navArrow {
+    color: rgba(255, 255, 255, 0.3); }
+  .boxedIn-light .boxedIn-navArrow:hover {
+    color: rgba(255, 255, 255, 0.6); }
+  .boxedIn-light .boxedIn-slide {
+    background-color: rgba(0, 0, 0, 0.6); }
+
+.boxedIn-dark {
+  color: #111111; }
+  .boxedIn-dark .boxedIn-scrollbar::-webkit-scrollbar {
+    background-color: rgba(0, 0, 0, 0.15); }
+  .boxedIn-dark .boxedIn-scrollbar::-webkit-scrollbar-thumb {
+    background-color: rgba(0, 0, 0, 0.3); }
+  .boxedIn-dark .boxedIn-scrollbar::-webkit-scrollbar-thumb:hover {
+    background-color: rgba(0, 0, 0, 0.6); }
+  .boxedIn-dark .boxedIn-dot {
+    background-color: rgba(255, 255, 255, 0.3); }
+  .boxedIn-dark .boxedIn-dotActive, .boxedIn-dark .boxedIn-dot:hover {
+    background-color: rgba(255, 255, 255, 0.6); }
+  .boxedIn-dark .boxedIn-navArrow {
+    color: rgba(0, 0, 0, 0.3); }
+  .boxedIn-dark .boxedIn-navArrow:hover {
+    color: rgba(0, 0, 0, 0.6); }
+  .boxedIn-dark .boxedIn-slide {
+    background-color: rgba(255, 255, 255, 0.6); }
